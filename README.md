@@ -18,9 +18,13 @@ Ran into an issue myself when trying to ssh into the server from my ubuntu machi
 It is required that your private key files are NOT accessible by others.                                                  
 Load key "/homechristian/.aws/credentials/christian_awspihole.pem": bare  permissions                 
 ubuntu@3.144.46.100: Permission denied (publickey)."                                                                           
-If you receive this issue, you need to change permissions to read only, and only for the owner of the key. File needs to be locked for every other user.                                                                                                                                                                  Your AWS server will have a 172.xx.xx.xx hostname, which is it's pulblic facing IP, but it's also part of the AWS network. This means that other AWS services you will create can freely talk to eachother without being exposed to the internet.                                                         
-9. Before setting up Pi-Hole, it's best practice to take care of some fundamental steps. We will be running "sudo apt update, and "sudo apt upgrade -y". Your server will update itself automatically, but it's best to have these practices under your belt.                                                                                 
-Now let's also change our hostname to something more descriptive. You can choose anything you'd like, but why not make it something more descriptive of what we're doing?                              
+If you receive this issue, you need to change permissions to read only, and only for the owner of the key. File needs to be locked for every other user. Your AWS server will have a 172.xx.xx.xx hostname, which is it's pulblic facing IP, but it's also part of the AWS network. This means that other AWS services you will create can freely talk to eachother without being exposed to the internet.                                                         
+9. Before setting up Pi-Hole, it's best practice to take care of some fundamental steps. We will be running;
+
+        sudo apt update
+        sudo apt upgrade -y 
+
+Your server will update itself automatically, but it's best to have these practices under your belt. Now let's also change our hostname to something more descriptive. You can choose anything you'd like, but why not make it something more descriptive of what we're doing?                              
 sudo hostnamectl set-hostname AWS_PiHole
 10. Now it's time to get Pi-Hole! The following command will grab the official Pi-Hole installer to begin. It's not best practice to use a curling shell script straight to bash like this to bash, because it's not a secure method. However we're working on a free machine that we can easily scrap if anything goes awry. Typically it's best to go to the Pi-Hole site and follow the official instructions.  
 *sudo curl -sSL https://install.pi-hole.net | bash*                                                                                         
