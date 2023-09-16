@@ -1,3 +1,5 @@
+# Step by step process for creating free AWS Pi-hole
+
 1. Navigate to AWS EC2 Management console
 2. Set zone as closest to your physical location in order to reduce latency. In AWS, you can create multiple instances in different locations, which would serve a number of different purposes. 
 3. From the AWS Services, navigate to the EC2 home page and click "Launch Instance"
@@ -8,7 +10,7 @@
 Now click "Launch instance" again, and you will see your server being created. Click on your new instance id, and you will be see your serverse Public IPv4 address, make notation of this. (3.144.46.100).
 8. Now, open up the command line on your desired computer that you'd like to SSH access into your server from. You must also remember to make sure your .pem file is present on the machine you wish to use. (I personally emailed my private key to my ubuntu machine, which is probably not the smartest move with something more sensitive and secure, but this was just for the purpose of this exercise). After entering the command to join your server, you'll be prompted to accept the servers unique signature. Your machine uses this to protect you from Man-In-The-Middle attacks, preventing you from mistakenly connecting to rogue servers and divulging other information. Now type in;                                                                                                                        
 
-        ssh -i /pathtofile/yourname_awspihole.pem ubuntu@*yourserveripv4*                                                                                                                                                
+        ,ssh -i /pathtofile/yourname_awspihole.pem ubuntu@*yourserveripv4*                                                                                                                                                
 
 Ran into an issue myself when trying to ssh into the server from my ubuntu machine... 
 
