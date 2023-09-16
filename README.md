@@ -1,5 +1,7 @@
 # Step by step process for creating free AWS Pi-hole
 
+This guide will teach you how manually setup your own free Pi-hole using an AWS server. I've also left in the speed bumps encountered along the way, as they may help with any issues you possibly run into while doing it yourself. 
+
 1. Navigate to AWS EC2 Management console
 
 2. Set zone as closest to your physical location in order to reduce latency. In AWS, you can create multiple instances in different locations, which would serve a number of different purposes. 
