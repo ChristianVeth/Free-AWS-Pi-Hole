@@ -61,7 +61,7 @@ This guide will teach you how manually setup your own free Pi-hole using an AWS 
 
        ![Alt text](piholedns.png)<img src="~/Documents/GitHub Repos/Free-AWS-Pi-Hole/piholedns.png">
 
-    Under Interface settings, "Allow only local requests" was blocking dns requests outside of my local network, so make sure to take a look at this when setting up your Pi-Hole! I changed this to "Permit all origins" under Potentially dangerous options. Proceeded to do another nslookup command, and here are the results;     
+    Under Interface settings, "Allow only local requests" was blocking dns requests outside of my local network, so make sure to take a look at this when setting up your Pi-Hole! I changed this to "Permit all origins" under the Potentially Dangerous Options setting. Proceeded to do another nslookup command, and here are the results;     
 
     ![Alt text](nslookup!.png)<img src="~/Documents/GitHub Repos/Free-AWS-Pi-Hole/nslookup!.png">                                                       
 
