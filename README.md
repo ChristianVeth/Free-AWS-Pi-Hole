@@ -17,9 +17,9 @@ Now click "Launch instance" again, and you will see your server being created. C
 
 8. Now, open up the command line on your desired computer that you'd like to SSH access into your server from. You must also remember to make sure your .pem file is present on the machine you wish to use. (I personally emailed my private key to my ubuntu machine, which is probably not the smartest move with something more sensitive and secure, but this was just for the purpose of this exercise). After entering the command to join your server, you'll be prompted to accept the servers unique signature. Your machine uses this to protect you from Man-In-The-Middle attacks, preventing you from mistakenly connecting to rogue servers and divulging other information. Now type in;                                                                                                                        
 
-        ,ssh -i /pathtofile/yourname_awspihole.pem ubuntu@*yourserveripv4*                                                                                                                                                
+                ssh -i /pathtofile/yourname_awspihole.pem ubuntu@*yourserveripv4*                                                                                                                                                
 
-Ran into an issue myself when trying to ssh into the server from my ubuntu machine... 
+        Ran into an issue myself when trying to ssh into the server from my ubuntu machine... 
 
 "Permissions 0664 for '/home/christian/.aws/credentials/christian_awspihole.pem' are too open.  
 It is required that your private key files are NOT accessible by others.                                                  
