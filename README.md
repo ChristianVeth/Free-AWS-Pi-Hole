@@ -60,6 +60,6 @@
 
    Under Interface settings, "Allow only local requests" was blocking dns requests outside of my local network, so make sure to take a look at this when setting up your Pi-Hole! I changed this to "Permit all origins" under Potentially dangerous options. And voila! We can now see all DNS requests coming from our network in the query log!     
 
-       ![Alt text](nslookup!.png)<img src="~/Documents/GitHub Repos/Free-AWS-Pi-Hole/nslookup!.png">                                                                       
-       ![Alt text](querylog.png)<img src="~/Documents/GitHub Repos/Free-AWS-Pi-Hole/querylog.png">
+      ![Alt text](nslookup!.png)<img src="~/Documents/GitHub Repos/Free-AWS-Pi-Hole/nslookup!.png">                                                                       
+      ![Alt text](querylog.png)<img src="~/Documents/GitHub Repos/Free-AWS-Pi-Hole/querylog.png">
     
