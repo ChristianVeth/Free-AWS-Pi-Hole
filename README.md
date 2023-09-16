@@ -16,7 +16,7 @@
 
 8. Now, open up the command line on your desired computer that you'd like to SSH access into your server from. You must also remember to make sure your .pem file is present on the machine you wish to use. (I personally emailed my private key to my ubuntu machine, which is probably not the smartest move with something more sensitive and secure, but this was just for the purpose of this exercise). After entering the command to join your server, you'll be prompted to accept the servers unique signature. Your machine uses this to protect you from Man-In-The-Middle attacks, preventing you from mistakenly connecting to rogue servers and divulging other information. Now type in;                                                                                                                        
 
-        | ssh -i /pathtofile/yourname_awspihole.pem ubuntu@*yourserveripv4*                                                                                                                                                
+        ssh -i /pathtofile/yourname_awspihole.pem ubuntu@*yourserveripv4*                                                                                                                                                
 
    Ran into an issue myself when trying to ssh into the server from my ubuntu machine... 
 
@@ -31,12 +31,12 @@ If you receive this issue, you need to change permissions to read only, and only
         sudo apt update
         sudo apt upgrade -y 
 
-Your server will update itself automatically, but it's best to have these practices under your belt. Now let's also change our hostname to something more descriptive. You can choose anything you'd like, but why not make it something more descriptive of what we're doing?                              
-sudo hostnamectl set-hostname AWS_PiHole
+   Your server will update itself automatically, but it's best to have these practices under your belt. Now let's also change our hostname to something more descriptive. You can choose anything you'd like, but why not make it something more descriptive of what we're doing?                            sudo hostnamectl set-hostname AWS_PiHole
 
 10. Now it's time to get Pi-Hole! The following command will grab the official Pi-Hole installer to begin. It's not best practice to use a curling shell script straight to bash like this to bash, because it's not a secure method. However we're working on a free machine that we can easily scrap if anything goes awry. Typically it's best to go to the Pi-Hole site and follow the official instructions.  
-*sudo curl -sSL https://install.pi-hole.net | bash*                                                                                         
-Continue through the setup window until asked to select your Upstream DNS provider. The DNS works by reaching out to the DNS Server when your PiHole can't connect the URL you want to go to with an IP address. Any of the listed selections are great choices, however I prefer Google or Cloudfare. Either way, you can't go wrong, and you can also change later from the web interface.
+
+        sudo curl -sSL https://install.pi-hole.net | bash*                                                                                         
+    Continue through the setup window until asked to select your Upstream DNS provider. The DNS works by reaching out to the DNS Server when your PiHole can't connect the URL you want to go to with an IP address. Any of the listed selections are great choices, however I prefer Google or Cloudfare. Either way, you can't go wrong, and you can also change later from the web interface.
 
 11. Next, choose your Ad Blocker lists. Either choice is fine, once again, don't sweat this choice! Also, you can add more later in the web interface! Now, we click "OK" to install the web admin interface, and do the same to hit "Yes" to install the compact web server. Do the same on the next page when asked if you would like to enable query logging. This is an easy yes, we want to log as much as possible! This helps us analyze to logs in order to isolate ads that slip through Pi-Hole in order to blacklist them. Lastly, when asked about your privacy mode, we can go ahead and select "show everything" for the purpose of setting up our practice AWS_PiHole, since it's our personal system.
 
