@@ -25,8 +25,8 @@ This guide will teach you how manually setup your own free Pi-hole using an AWS 
 
         Permissions 0664 for '/home/christian/.aws/credentials/christian_awspihole.pem' are too open.  
         It is required that your private key files are NOT accessible by others.                                                  
-        Load key "/homechristian/.aws/credentials/christian_awspihole.pem": bare  permissions                 
-        ubuntu@3.144.46.100: Permission denied (publickey).                                                                           
+        Load key "/home/christian/.aws/credentials/christian_awspihole.pem": bare  permissions                 
+        ubuntu@x.xxx.xx.xxxx: Permission denied (publickey).                                                                           
    If you receive this issue, you need to change permissions to read only, and only for the owner of the key. File needs to be locked for every other user. Your AWS server will have a 172.xx.xx.xx hostname, which is it's pulblic facing IP, but it's also part of the AWS network. This means that other AWS services you will create can freely talk to eachother without being exposed to the internet.                                                         
 
 9. Before setting up Pi-hole, it's best practice to take care of some fundamental steps. We will be running;
