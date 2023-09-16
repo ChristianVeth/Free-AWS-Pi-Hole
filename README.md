@@ -1,6 +1,6 @@
 # Step by step process for creating free AWS Pi-hole
 
-This guide will teach you how manually setup your own free Pi-hole using an AWS server. I've also left in the speed bumps encountered along the way, as they may help with any issues you encoutner while doing this process yourself. 
+This guide will teach you how manually setup your own free Pi-hole using an AWS server. I've also left in the speed bumps encountered along the way, as you may encounter similar issues as well. 
 
 1. Navigate to AWS EC2 Management console.
 
