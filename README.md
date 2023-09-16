@@ -57,7 +57,7 @@ This guide will teach you how manually setup your own free Pi-hole using an AWS 
 16. Now here's where it got fun! I personally wasn't able to     connect to my Pi-Hole web console from by searching the URL. Turns out, the issues was that I did in fact need to go back into the AWS Instance, and change some security rules. I first, searched "what is my ip address" in google, and noted down my Public facing IP. Then I needed to edit the inbound traffic rules in my security group to allow traffic to each protocol form my specific IP address. Once I had set these, I was able to login to my Pi-Hole Web Management Console, but the issues weren't done there! I ran into some roadblocks when attempting to use Pi-Hole to view my DNS query log from Pi-Hole. First, it wasn't enough to only set the DNS in my local machine, but I also had to set it in my router. Seems as if it was causing an error from trying to use two different DNS servers. But even after this, was still not having any luck showing any DNS requests in the query log!      Did an nslookup in the command line, and this resulted in a "DNS request timed out."          
 
        ![Alt text](nslookup.png)<img src="~/Documents/GitHub Repos/Free-AWS-Pi-Hole/nslookup.png">                                                                                                                  
-    Time to dig further! I took a look at the DNS settings in Pi-Hole (with the suggestion of a google search for some assistance ;). Turns out I needed to adjust some settings in here!
+    Time to dig further! I took a look at the DNS settings in Pi-Hole; turns out I needed to adjust some settings in here!
 
        ![Alt text](piholedns.png)<img src="~/Documents/GitHub Repos/Free-AWS-Pi-Hole/piholedns.png">
 
